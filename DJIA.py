@@ -11,7 +11,6 @@ import pandas as pd
 import math
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-%matplotlib inline
 DJIA=web.DataReader(name='DJIA',data_source='yahoo',start='2000-1-1')
 DJIA.info()
 DJIA.tail()
