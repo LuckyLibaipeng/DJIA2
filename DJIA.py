@@ -16,7 +16,7 @@ DJIA.tail()
 DJIA['Close'].plot(figsize=(8,5))
 plt.show()
 #DJIa指数历史水平
-%time
+%%time
 DJIA['Ret_Loop']=0.0
 for i in range(1,len(DJIA)):
     DJIA['Ret_Loop'][i]=np.log(DJIA['Close'][i]/DJIA['Close'][i-1])
