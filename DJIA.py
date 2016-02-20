@@ -35,5 +35,4 @@ DJIA[['Close','42d','252d']].plot(figsize=(8,5))
 DJIA['Mov_Vol']=pd.rolling_std(DJIA['Return'],window=252)*math.sqrt(252)
 #moving annual volatility
 DJIA[['Close','Mov_Vol','Return']].plot(subplots=True,style='b',figsize=(8,7))
-#对数收益率
-symbols=['DJIA']
+
