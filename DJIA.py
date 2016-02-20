@@ -17,12 +17,10 @@ DJIA.info()
 DJIA.tail()
 DJIA['Close'].plot(figsize=(8,5))
 #DJIa指数历史水平
-#%time
 DJIA['Ret_Loop']=0.0
 for i in range(1,len(DJIA)):
     DJIA['Ret_Loop'][i]=np.log(DJIA['Close'][i]/DJIA['Close'][i-1])
 DJIA[['Close','Ret_Loop']].tail()
-#%time 
 DJIA['Return']=np.log(DJIA['Close']/DJIA['Close'].shift(1))
 DJIA[['Close','Ret_Loop','Return']].tail()
 del DJIA['Ret_Loop']
